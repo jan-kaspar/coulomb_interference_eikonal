@@ -1,0 +1,16 @@
+.*
+*.pdf
+*.root
+*.log
+
+!.gitignore
+
+input
+test_b_max
+test_q_max
+
+test_cni_eikonal
+test_cni_elegent
+test_cni_petrov
+test_cni_terms
+test_hadronic
