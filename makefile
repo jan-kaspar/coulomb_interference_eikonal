@@ -2,7 +2,7 @@ HepMC_DIR = /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/hepmc/2.06.07-pafccj
 
 GSL_DIR = /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/gsl/2.2.1-pafccj
 
-Elegent_DIR = /afs/cern.ch/work/j/jkaspar/software/Elegent/production/CMSSW_11_0_0/install
+Elegent_DIR = /afs/cern.ch/work/j/jkaspar/work/software/Elegent/production/CMSSW_11_0_0/install
 
 INCS = `root-config --cflags` -I$(GSL_DIR)/include -I${Elegent_DIR} -I$(HepMC_DIR)/include
 LIBS = `root-config --libs` -L$(GSL_DIR)/lib -lgsl -lgslcblas -lm -L${Elegent_DIR}/lib -lElegent -L$(HepMC_DIR)/lib -lHepMC
