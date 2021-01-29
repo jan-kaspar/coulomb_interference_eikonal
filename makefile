@@ -1,6 +1,6 @@
-HepMC_DIR = /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/hepmc/2.06.07-pafccj
+HepMC_DIR = /cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/hepmc/2.06.07-bcolbf2
 
-GSL_DIR = /cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/gsl/2.2.1-pafccj
+GSL_DIR = /cvmfs/cms.cern.ch/slc7_amd64_gcc900/external/gsl/2.6-ghbfee
 
 Elegent_DIR = /afs/cern.ch/work/j/jkaspar/work/software/Elegent/production/CMSSW_11_0_0/install
 
