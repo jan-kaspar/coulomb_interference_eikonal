@@ -298,6 +298,14 @@ int main()
 					g_de_C_integ->Write();
 				}
 
+				TGraph *g_de_C_asympt = new TGraph();
+				for (double b = 1E-3; b < 1000; b += 0.1)
+				{
+					const int idx = g_de_C_asympt->GetN();
+					g_de_C_asympt->SetPoint(idx, b, delta_C_asympt(b));
+				}
+				g_de_C_asympt->Write("de_C_asympt");
+
 				printf("\t\t\tsampling delta_C\n");
 				delta_C_interpolator = new Interpolator(5000, 1E-8, 21., true);
 				delta_C_interpolator->Sample(delta_C_exact);
