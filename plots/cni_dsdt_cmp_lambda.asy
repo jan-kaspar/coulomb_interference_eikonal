@@ -33,7 +33,11 @@ for (int mi : models.keys)
 
 		pen p = StdPen(lai + 1);
 
-		draw(RootGetObject(f_eikonal, models[mi] + "/" + formFactor + "/la=" + lambdas[lai] + "/CH/g_dsdt"), p, label);
+		string f = f_eikonal;
+		if (lambdas[lai] == "3.0E-06")
+			f = topDir + "test_cni_eikonal_la=3E-6.root";
+
+		draw(RootGetObject(f, models[mi] + "/" + formFactor + "/la=" + lambdas[lai] + "/CH/g_dsdt"), p, label);
 	}
 
 	limits((0, 300), (0.02, 1000), Crop);
@@ -52,7 +56,11 @@ for (int mi : models.keys)
 	{
 		pen p = StdPen(lai + 1);
 
-		RootObject obj = RootGetObject(f_eikonal, models[mi] + "/" + formFactor + "/la=" + lambdas[lai] + "/CH/g_dsdt");
+		string f = f_eikonal;
+		if (lambdas[lai] == "3.0E-06")
+			f = topDir + "test_cni_eikonal_la=3E-6.root";
+
+		RootObject obj = RootGetObject(f, models[mi] + "/" + formFactor + "/la=" + lambdas[lai] + "/CH/g_dsdt");
 		RootObject obj_ref = RootGetObject(f_eikonal, models[mi] + "/" + formFactor + "/la=" + lambda_ref + "/CH/g_dsdt");
 
 		DrawRel(obj, obj_ref, p);
